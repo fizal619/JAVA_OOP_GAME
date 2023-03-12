@@ -20,6 +20,8 @@ public class Player extends Entity {
     if (stamina > 0) {
       stamina -= 5;
       target.hp -= 5;
+    } else {
+      System.out.println("Your stamina is too low to do this. Go home!");
     }
   }
 
@@ -61,6 +63,8 @@ public class Player extends Entity {
     System.out.print("\033\143");
     System.out.printf("name: %s\n", name);
     System.out.printf("attack: %s\n", attack);
+    System.out.printf("hp: %s\n", hp);
+    System.out.printf("stamina: %s\n", stamina);
     System.out.printf("gold: %s\n", gold);
     System.out.printf("reputation: %s\n", reputation);
     if (main_hand != null) {
